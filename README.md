@@ -13,8 +13,8 @@
 - start - начало сеанса
 - hall_id - id зала
 - movie_id - id фильма
-- selected_seats - занятые места зала в виде сериализованной json-строки
+- selected_seats - занятые/купленные места зала в виде сериализованной json-строки
 - seance-seats - все места зала для сеанса в виде сериализованной json-строки
 ## Места - seats
 - hall_id - id зала
-- type_seat - виде места (обычное st-standart, vip, отсутствует- disable)
+- type_seat - вид места (обычное st-standart, vip, отсутствует- disable)
