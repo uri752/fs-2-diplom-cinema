@@ -9,7 +9,7 @@
 
       </div>
       <div class="popup__wrapper">
-        <form action="/admin/add_movie" method="post" accept-charset="utf-8" id="addMovie">
+        <form action="/admin/add-movie" method="post" accept-charset="utf-8" id="addMovie">
           @csrf
           
           <label class="conf-step__label conf-step__label-fullsize" for="name">

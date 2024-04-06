@@ -10,5 +10,5 @@ function deleteHall(event) {
     const trashForm = document.querySelector('.trash-form');
     nameHall.querySelector('span').textContent = event.target.closest('li').textContent;
     const hallID = event.target.closest('li').dataset.id;
-    trashForm.action =  '/admin/delete_hall/' + hallID;
+    trashForm.action =  '/admin/delete-hall/' + hallID;
 }

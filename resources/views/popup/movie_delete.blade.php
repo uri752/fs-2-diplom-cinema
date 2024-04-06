@@ -9,7 +9,7 @@
 
       </div>
       <div class="popup__wrapper">
-        <form action="/admin/delete_movie" method="post" accept-charset="utf-8" id="delete_movie">
+        <form action="/admin/delete-movie" method="post" accept-charset="utf-8" id="delete_movie">
         @csrf
           <p class="conf-step__paragraph">Вы действительно хотите удалить фильм <span></span>?</p>
           <!-- В span будет подставляться название зала -->

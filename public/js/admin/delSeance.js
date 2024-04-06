@@ -8,7 +8,7 @@ export default function delSeance(hallsData, moviesData, seancesData) {
             const movie = moviesData.find(movie => movie.id == getSeanceId(i, hallsData, seancesData).movie_id);
             const formSeance = document.getElementById('delete_seance');
             formSeance.querySelector('span').textContent = movie.title;
-            formSeance.action = '/admin/delete_seance/' +  getSeanceId(i, hallsData, seancesData).id;
+            formSeance.action = '/admin/delete-seance/' +  getSeanceId(i, hallsData, seancesData).id;
             document.getElementById('delShowPopup').classList.add('active');
             formSeance.onsubmit = (e) => {
                 e.preventDefault();

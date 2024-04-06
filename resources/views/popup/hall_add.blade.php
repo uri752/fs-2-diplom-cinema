@@ -10,7 +10,7 @@
       </div>
       <div class="popup__wrapper">
 
-        <form action="/admin/add_hall" method="post" accept-charset="utf-8" id="addHall">
+        <form action="/admin/add-hall" method="post" accept-charset="utf-8" id="addHall">
             
           @csrf
           <label class="conf-step__label conf-step__label-fullsize" for="name">

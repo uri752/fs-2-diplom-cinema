@@ -8,7 +8,7 @@ export default function addSeance(hallsData, moviesData, seancesData) {
         moviesEl[i].onclick = (e) => {
             document.getElementById('addShowPopup').classList.add('active');
             const form = document.getElementById('add_seance');
-            form.action = '/admin/add_seance/' + moviesData[i].id;
+            form.action = '/admin/add-seance/' + moviesData[i].id;
             form.onsubmit = function(e) { 
                 e.preventDefault();
                 if (!isTimeOk(form.hall.value, 

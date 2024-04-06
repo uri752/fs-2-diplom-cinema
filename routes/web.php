@@ -29,16 +29,16 @@ Route::prefix('admin')->group(function () {
     Route::post('login', [LoginController::class, 'authenticate']);
     
     Route::get('register', [RegisterController::class, 'adminRegister'])->name('admin-register'); 
-    Route::get('/auth/app_register', [RegisterController::class, 'registerGet'])->name('register');
+    Route::get('/auth/app-register', [RegisterController::class, 'registerGet'])->name('register');
 
     Route::group(['middleware'=>'auth'], function() {
         Route::get('index', [AdminController::class, 'index'])->name('index');
-        Route::post('add_hall', [HallController::class, 'create'])->name('add-hall');
+        Route::post('add-hall', [HallController::class, 'create'])->name('add-hall');
         
         Route::post('add-movie', [AdminController::class, 'createMovie'])->name('add-movie');        
        
         Route::post('delete-hall/{id}', [HallController::class, 'delete']);
-        Route::post('delete-movie/{id}', [AdminController::class, 'delete-movie']);        
+        Route::post('delete-movie/{id}', [AdminController::class, 'deleteMovie']);        
 
         Route::post('seances', [SeanceController::class, 'update'])->name('seance-update');        
         Route::post('add-seance/{id}', [SeanceController::class, 'update'])->name('add-seance');                
