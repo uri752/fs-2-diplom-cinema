@@ -24,12 +24,12 @@
           
           <label class="conf-step__label conf-step__label-fullsize" for="description">
             Описание фильма
-            <input class="conf-step__input" id="movie-description" type="text" name="description">
+            <input class="conf-step__input" id="movie-description" type="text" placeholder="Описание фильма" name="description" required>
           </label>
 
           <label class="conf-step__label conf-step__label-fullsize" for="country">
             Страна
-            <input class="conf-step__input" id="movie-country" type="text" name="country">
+            <input class="conf-step__input" id="movie-country" type="text" laceholder="США" name="country" required>
           </label>
           
           <div class="alert"></div>
