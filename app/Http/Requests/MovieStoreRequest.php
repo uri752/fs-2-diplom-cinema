@@ -25,7 +25,7 @@ class MovieStoreRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255',
-            'duration' => 'required|min:10|max:180',
+            'duration' => 'required|max:180',
             'description' => 'required|max:255',
             'country' => 'required|max:255'
         ];

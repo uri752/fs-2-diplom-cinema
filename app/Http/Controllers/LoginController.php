@@ -15,7 +15,7 @@ class LoginController extends Controller
         echo 'LoginController->authenticate' . PHP_EOL . $request->input('mail');
 
         $user = User::query()->firstWhere(['email' => $request->input('mail')]);                              
-        if ($user) {
+        if ($user && Hash::check($request->input('pwd'), $user->password)) {
             Auth::login($user);
             return redirect('/admin/index');
         }
