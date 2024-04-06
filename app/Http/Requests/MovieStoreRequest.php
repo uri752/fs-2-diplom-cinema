@@ -24,16 +24,28 @@ class MovieStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',           
-            'duration' => 'required'            
+            'name' => 'required|max:255',
+            'duration' => 'required|min:10|max:180',
+            'description' => 'required|max:255',
+            'country' => 'required|max:255'
         ];
     }
 
     public function messages()
     {
         return [
-            'name.required' => ' Поле "Название фильма" должно быть заполнено!',
-            'duration.required' => ' Поле "Продолжительность" должно быть заполнено!'            
+            'name.required' => 'Поле "Название фильма" должно быть заполнено!',
+            'name.max' => 'Длина строки "Название фильма" не должна превывашть 255 символов!',
+            
+            'duration.required' => 'Поле "Продолжительность" должно быть заполнено!',
+            'duration.min' => 'Поле "Продолжительность" должно быть больше 10!',
+            'duration.max' => 'Поле "Продолжительность" должно быть меньше 180!',
+
+            'description.required' => 'Поле "Описание фильма" должно быть заполнено!',
+            'description.max' => 'Длина строки "Описание фильма" не должна превывашть 255 символов!',
+
+            'country.required' => 'Поле "Страна" должно быть заполнено!',
+            'country.max' => 'Длина строки "Страна" не должна превывашть 255 символов!'
         ];
     }
 

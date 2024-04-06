@@ -62,7 +62,7 @@
           </div>
         </form>
           
-        <a href="{{route('admin_register')}}" style="text-decoration: none"><button class="conf-step__button conf-step__button-regular" name="redirect">Регистрация</button></a>
+        <a href="{{route('admin-register')}}" style="text-decoration: none"><button class="conf-step__button conf-step__button-regular" name="redirect">Регистрация</button></a>
 
       </div>
     </section>

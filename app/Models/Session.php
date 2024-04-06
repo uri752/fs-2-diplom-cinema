@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Movie;
 use App\Models\Hall;
@@ -18,12 +19,12 @@ class Session extends Model
         'session_seats' => 'array',
     ];
 
-    public function movie() 
+    public function movie(): BelongsTo
     {
         return $this->belongsTo(Movie::class);
     }
 
-    public function hall() 
+    public function hall(): BelongsTo
     {
         return $this->belongsTo(Hall::class);
     }

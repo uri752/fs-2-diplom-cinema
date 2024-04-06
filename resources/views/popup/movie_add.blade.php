@@ -29,7 +29,7 @@
 
           <label class="conf-step__label conf-step__label-fullsize" for="country">
             Страна
-            <input class="conf-step__input" id="movie-country" type="text" laceholder="США" name="country" required>
+            <input class="conf-step__input" id="movie-country" type="text" placeholder="США" name="country" required>
           </label>
           
           <div class="alert"></div>

@@ -21,6 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/halls/{hall}', [HallController::class, 'update']);
-Route::post('/seats/{id}', [HallController::class, 'update-seats']);
-Route::post('/seances/{seance}', [SeanceController::class, 'add-seats']);
+Route::post('/seats/{id}', [HallController::class, 'updateSeats']);
+Route::post('/seances/{seance}', [SeanceController::class, 'addSeats']);
 Route::post('/seances', [SeanceController::class, 'update']);

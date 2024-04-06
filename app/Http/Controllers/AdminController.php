@@ -31,12 +31,12 @@ class AdminController extends Controller
     
     public function createMovie(MovieStoreRequest $request)
     {                
-        //$validated = $request->validated();                              
+        $validated = $request->validated();                              
         Movie::query()->create([
-            'title' => $request['name'],            
-            'duration' => $request['duration'],
-            'description' => $request['description'],
-            'country' => $request['country']
+            'title' => $validated['name'],            
+            'duration' => $validated['duration'],
+            'description' => $validated['description'],
+            'country' => $validated['country']
         ]);
         
         return redirect()->back();

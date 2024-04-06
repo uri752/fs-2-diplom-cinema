@@ -10,7 +10,7 @@ class Movie extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    public $fillable = ['title', 'duration'];
+    public $fillable = ['title', 'duration', 'description', 'country'];
 
     public function sessions()
     {

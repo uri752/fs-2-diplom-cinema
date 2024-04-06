@@ -49,7 +49,7 @@
             <ul class="movie-seances__list">
             @foreach ($movie->sessions as $seance)
               @if ($seance->hall_id == $hall->id)
-                <li class="movie-seances__time-block"><a class="movie-seances__time" href="{{ route('client_hall', $hall->id) }}">{{ $seance->start}}</a></li>
+                <li class="movie-seances__time-block"><a class="movie-seances__time" href="{{ route('client-hall', $hall->id) }}">{{ $seance->start}}</a></li>
               @endif
             @endforeach  
             </ul>

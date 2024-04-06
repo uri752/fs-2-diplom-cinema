@@ -35,13 +35,13 @@ Route::prefix('admin')->group(function () {
         Route::get('index', [AdminController::class, 'index'])->name('index');
         Route::post('add_hall', [HallController::class, 'create'])->name('add-hall');
         
-        Route::post('add_movie', [AdminController::class, 'createMovie'])->name('add-movie');        
+        Route::post('add-movie', [AdminController::class, 'createMovie'])->name('add-movie');        
        
-        Route::post('delete_hall/{id}', [HallController::class, 'delete']);
-        Route::post('delete_movie/{id}', [AdminController::class, 'deleteMovie']);        
+        Route::post('delete-hall/{id}', [HallController::class, 'delete']);
+        Route::post('delete-movie/{id}', [AdminController::class, 'delete-movie']);        
 
         Route::post('seances', [SeanceController::class, 'update'])->name('seance-update');        
-        Route::post('add_seance/{id}', [SeanceController::class, 'update'])->name('add-seance');                
+        Route::post('add-seance/{id}', [SeanceController::class, 'update'])->name('add-seance');                
 
         Route::post('halls/{id}', [HallController::class, 'update'])->name('halls-update');                
         Route::post('seats/{id}', [HallController::class, 'updateSeats'])->name('seats-update');        
@@ -61,12 +61,12 @@ Route::name('user.')->group(function () {
     
     //Route::get('/admin_main', [TodoController::class, 'showAdminMain'])->middleware('auth')->name('private');
 
-    Route::get('/auth/app_login', [LoginController::class, 'loginGet'])->name('login');
-    Route::post('/auth/app_login', [LoginController::class, 'login']);  
+    Route::get('/auth/app-login', [LoginController::class, 'loginGet'])->name('login');
+    Route::post('/auth/app-login', [LoginController::class, 'login']);  
     Route::post('/auth/register/changePass/{email}', [RegisterController::class, 'updatePassword'])->name('update-password');
     Route::get('/auth/logout', [LoginController::class, 'logout'])->name('logout');
-    Route::get('/auth/app_register', [RegisterController::class, 'registerGet'])->name('register');
-    Route::post('/auth/app_register', [RegisterController::class, 'register']); 
+    Route::get('/auth/app-register', [RegisterController::class, 'registerGet'])->name('register');
+    Route::post('/auth/app-register', [RegisterController::class, 'register']); 
 });
 
-Route::get('/login', [LoginController::class, 'admin_login'])->name('admin-login'); 
+Route::get('/login', [LoginController::class, 'adminLogin'])->name('admin-login'); 
