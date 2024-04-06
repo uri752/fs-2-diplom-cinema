@@ -34,7 +34,8 @@ class AdminController extends Controller
         $validated = $request->validated();                              
         Movie::query()->create([
             'title' => $validated['name'],            
-            'duration' => $validated['duration']
+            'duration' => $validated['duration'],
+            'description' => $validated['description']
         ]);
         
         return redirect()->back();

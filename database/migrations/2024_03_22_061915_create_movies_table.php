@@ -17,6 +17,10 @@ return new class extends Migration
             
             $table->string('title');
             $table->unsignedInteger('duration');
+            
+            $table->string('description')->nullable();
+            $table->string('country')->nullable();
+            
         });
     }
 

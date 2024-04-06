@@ -35,10 +35,10 @@
           </div>
           <div class="movie__description">
             <h2 class="movie__title">{{ $movie->title }}</h2>
-            <p class="movie__synopsis">После принятия образа аватара солдат Джейк Салли становится предводителем народа на-ви и берет на себя миссию по защите новых друзей от корыстных бизнесменов с Земли. Теперь ему есть за кого бороться — с Джейком его прекрасная возлюбленная Нейтири. Когда на Пандору возвращаются до зубов вооруженные земляне, Джейк готов дать им отпор.</p>
+            <p class="movie__synopsis">{{ $movie->description }}</p>
             <p class="movie__data">
               <span class="movie__data-duration">{{ $movie->duration }}</span>
-              <span class="movie__data-origin">США</span>
+              <span class="movie__data-origin">{{ $movie->country }}</span>
             </p>
           </div>
         </div>
